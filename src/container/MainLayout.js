@@ -16,7 +16,7 @@ class MainLayout extends React.Component {
     
     getList = () => {
         const prefix = "https://cors-anywhere.herokuapp.com/";
-        const quoteUrl = "http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3";
+        const quoteUrl = "http://www.recipepuppy.com/api/";
         // console.log(this.state.inputData)
         fetch(prefix + quoteUrl + '?i=' + this.state.inputData)
             .then(res => res.json())
@@ -32,15 +32,15 @@ class MainLayout extends React.Component {
 
         ///// Uncomented Line below suppose to fetch data from puppy's server \\\\\
 
-        // this.getList();
+        this.getList();
 
         ///// End \\\\\
 
 
         /////   Due to Server Error App layout can be tested with these two lines \\\\
 
-        const data = fakeData;
-        this.setState({ recipiesList : data});
+        // const data = fakeData;
+        // this.setState({ recipiesList : data});
 
         ///// End \\\\\
     }
