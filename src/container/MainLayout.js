@@ -13,7 +13,7 @@ class MainLayout extends React.Component {
         recipiesList: null,
         inputData: ''
     }
-    
+
     getList = () => {
         const prefix = "https://cors-anywhere.herokuapp.com/";
         const quoteUrl = "http://www.recipepuppy.com/api/";
@@ -25,22 +25,22 @@ class MainLayout extends React.Component {
     }
 
     createRecipiesList = data => {
-        this.setState({ recipiesList : data.results});
+        this.setState({ recipiesList: data.results });
     }
-    
+
     buttonHandle = () => {
 
         ///// Uncomented Line below suppose to fetch data from puppy's server \\\\\
 
-        this.getList();
+        // this.getList();
 
         ///// End \\\\\
 
 
         /////   Due to Server Error App layout can be tested with these two lines \\\\
 
-        // const data = fakeData;
-        // this.setState({ recipiesList : data});
+        const data = fakeData;
+        this.setState({ recipiesList : data});
 
         ///// End \\\\\
     }
@@ -55,7 +55,7 @@ class MainLayout extends React.Component {
     render() {
         return (
             <div className="main-component">
-                <SearchComponent onChange={ value => this.valueHandle(value) } onClick={() => { this.buttonHandle() }} />
+                <SearchComponent onChange={value => this.valueHandle(value)} onClick={() => { this.buttonHandle() }} />
                 <RecipiesList recipiesList={this.state.recipiesList} />
                 <div className="logo"><h3>© bio8oid</h3></div>
             </div>

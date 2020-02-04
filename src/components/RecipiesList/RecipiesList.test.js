@@ -7,7 +7,7 @@ it('renders without crashing', () => {
 
     const recipies = [
         {
-            "title": "Roasted Garlic Grilling Sauce \r\n\t\t\r\n\t\r\n\t\t\r\n\t\r\n\t\t\r\n\t\r\n\t\r\n\r\n",
+            "title": "Roasted Garlic Grilling Sauce",
             "href": "http:\/\/www.kraftfoods.com\/kf\/recipes\/roasted-garlic-grilling-sauce-56344.aspx",
             "ingredients": "garlic, onions, hot sauce",
             "thumbnail": "http:\/\/img.recipepuppy.com\/634118.jpg"

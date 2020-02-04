@@ -1,5 +1,5 @@
 .container-search {
-    margin-bottom: 10vh;
+	margin-bottom: 10vh;
 
 	.header-search {
 		display: flex;
@@ -19,7 +19,7 @@
 		.wrap-image {
 			max-height: 400px;
 			background-position: center;
-            background-repeat: no-repeat;
+			background-repeat: no-repeat;
 		}
 	}
 
@@ -37,6 +37,12 @@
 		color: #fff;
 		border: none;
 		border-radius: 5px;
+
+		@media not all and (hover: none) {
+			&:hover {
+				background-color: rgb(126, 9, 64);
+			}
+		}
 	}
 
 	input {

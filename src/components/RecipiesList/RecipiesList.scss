@@ -38,6 +38,12 @@
 			color: #fff;
 			text-decoration: none;
 			text-align: center;
+
+			@media not all and (hover: none) {
+				&:hover {
+					background-color: rgb(126, 9, 64);
+				}
+			}
 		}
 
 		.list-item-link {
@@ -46,6 +52,13 @@
 			margin: 25px;
 			color: rgb(173, 30, 97);
 			text-decoration: none;
+
+			@media not all and (hover: none) {
+				&:hover {
+					color: rgb(126, 9, 64);
+					transform: translate(2px);
+				}
+			}
 		}
 	}
 }
