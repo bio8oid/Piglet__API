@@ -16,10 +16,8 @@
 			text-shadow: 5px 5px 15px rgba(104, 36, 47, 0.849);
 		}
 
-		.wrap-image {
-			max-height: 400px;
-			background-position: center;
-			background-repeat: no-repeat;
+		.header-image {
+			max-width: 100%;
 		}
 	}
 
@@ -57,5 +55,17 @@
 	.rs-body .rs-option {
 		font-size: 20px;
 		color: rgb(173, 30, 97);
+	}
+}
+
+@media (max-width: 1150px) {
+	.container-search .header-search h1 {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 850px) {
+	.container-search .wrap-search {
+		flex-direction: column;
 	}
 }

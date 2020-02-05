@@ -34,9 +34,9 @@ const SearchComponent = props => {
     return (
         <div className="container-search">
             <div className="header-search">
-                <img alt="left" className="wrap-image left" src="./images/jane-left.png" />
+                <img alt="left" className="header-image" src="./images/jane-left.png" />
                 <h1>find something yummy <br />with jane the piglet</h1>
-                <img alt="right" className="wrap-image right" src="./images/jane-right.png" />
+                <img alt="right" className="header-image" src="./images/jane-right.png" />
             </div>
             <div className="wrap-search">
                 <Selectrix className="input-search"
