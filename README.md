@@ -1,4 +1,4 @@
-# [VIEW LIFE PIGLET DEMO](https://piglet.netlify.com/)
+## [VIEW LIFE PIGLET DEMO](https://piglet.netlify.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
