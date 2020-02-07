@@ -35,6 +35,7 @@
 		color: #fff;
 		border: none;
 		border-radius: 5px;
+		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.849);
 
 		@media not all and (hover: none) {
 			&:hover {
@@ -45,6 +46,11 @@
 
 	input {
 		width: 150px;
+	}
+	
+	.rs-wraper, .rs-header, .rs-toggle    {
+		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.349);
+		border-radius: 10px!important;
 	}
 
 	.rs-searchable {
