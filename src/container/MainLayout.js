@@ -3,10 +3,6 @@ import SearchComponent from "../components/SearchComponent/SearchComponent";
 import RecipiesList from "../components/RecipiesList/RecipiesList";
 import './MainLayout.scss';
 
-/// Temporary data \\\
-import fakeData from '../data.json';
-
-
 class MainLayout extends React.Component {
 
     state = {
@@ -14,40 +10,31 @@ class MainLayout extends React.Component {
         inputData: ''
     }
 
-    getList = () => {
+    getList = async () => {
         const prefix = "https://cors-anywhere.herokuapp.com/";
-        const quoteUrl = "http://www.recipepuppy.com/api/";
-        // console.log(this.state.inputData)
-        fetch(prefix + quoteUrl + '?i=' + this.state.inputData)
-            .then(res => res.json())
-            // .then(data => console.log(data))
-            .then(this.createRecipesList);
+        const url = "https://api.edamam.com/search?q=";
+        const apiId = "&app_id=19b48c8f";
+        const apiKey = "&app_key=61efd35f9492002d6e7b57f58fa90f63";
+        const rangeOfItems = "&from=0&to=50";
+
+        try {
+            const res = await fetch(prefix + url + this.state.inputData + apiId + apiKey + rangeOfItems);
+            const data = await res.json();
+            this.createRecipiesList(data);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     createRecipiesList = data => {
-        this.setState({ recipiesList: data.results });
+        this.setState({ recipiesList: data.hits });
     }
 
     buttonHandle = () => {
-
-        ///// Uncomented Line below suppose to fetch data from puppy's server \\\\\
-
-        // this.getList();
-
-        ///// End \\\\\
-
-
-        /////   Due to Server Error App layout can be tested with these two lines \\\\
-
-        const data = fakeData;
-        this.setState({ recipiesList : data});
-
-        ///// End \\\\\
+        this.getList();
     }
 
     valueHandle = value => {
-        // console.log(value)
-        // console.log(value.map(x=> x.label).toString())
         const inputData = value.map(x => x.label).toString();
         this.setState({ inputData });
     }

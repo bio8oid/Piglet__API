@@ -1,12 +1,14 @@
 .list-wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 
 	.list-item {
 		width: 50%;
 		background: #fff;
 		border-radius: 15px;
-		margin: 10px;
+		margin-bottom: 50px;
 		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.849);
 
 		h3 {
@@ -26,28 +28,15 @@
 		.image-and-tags-wrapper {
 			display: flex;
 			justify-content: space-between;
-			flex-wrap: wrap;
 			align-items: center;
 			padding: 20px 100px;
 		}
 
-		.tag {
-			background: rgb(173, 30, 97);
-			border-radius: 5px;
-			padding: 8px;
-			margin: 10px;
-			line-height: 50px;
-			color: #fff;
-			text-transform: uppercase;
-			text-decoration: none;
-			text-align: center;
-			box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.849);
-
-			@media not all and (hover: none) {
-				&:hover {
-					background-color: rgb(126, 9, 64);
-				}
-			}
+		.list-ingredients-tags {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 70%;
 		}
 
 		.list-item-link {
@@ -62,6 +51,28 @@
 					color: rgb(126, 9, 64);
 					transform: translate(2px);
 				}
+			}
+		}
+	}
+
+	.list-item .tag,
+	.pagination-button {
+		background: rgb(173, 30, 97);
+		border-radius: 5px;
+		border: none;
+		padding: 0 10px;
+		margin: 10px;
+		line-height: 35px;
+		font-size: 14px;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.849);
+
+		@media not all and (hover: none) {
+			&:hover {
+				background-color: rgb(126, 9, 64);
 			}
 		}
 	}
