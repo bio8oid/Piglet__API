@@ -6,7 +6,7 @@ import './MainLayout.scss';
 class MainLayout extends React.Component {
 
     state = {
-        recipiesList: null,
+        recipiesList: [],
         inputData: ''
     }
 
