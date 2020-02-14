@@ -8,7 +8,7 @@ class RecipiesList extends React.Component {
         recipiesList: []
     }
 
-    handlePage = value => e => {
+    handlePage = () => e => {
         let id = e.target.id;
         this.setState({ page: id });
     }
@@ -19,7 +19,6 @@ class RecipiesList extends React.Component {
         }
         else return recipiesList;
     }
-
 
     render() {
 
