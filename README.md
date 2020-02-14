@@ -1,4 +1,6 @@
-## [VIEW LIFE PIGLET DEMO](https://piglet.netlify.com/)
+## React App to search recipe basing on ingredients or dish name.
+
+# [VIEW LIFE PIGLET DEMO](https://piglet.netlify.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
